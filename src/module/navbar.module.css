@@ -1,0 +1,141 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+.navbar{
+    background-color: lightcoral;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.4); 
+}
+.heading{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 2.5rem;
+    font-style: normal;
+}
+.navItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 15px;
+}
+.list{
+    display: flex;
+     gap: 20px;
+    align-items: center;
+}
+.list a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.list a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in;
+}
+.list a:hover::after{
+     transform-origin: left;
+     transform: scaleX(1);
+}
+.search{
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.list select{
+     border: none;
+    background-color: lightcoral;
+    color: white;
+    font-size: 1.3rem;
+    outline: none; 
+    margin-top: 3px;
+    text-overflow: ellipsis;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    cursor: pointer;
+}
+.list option{
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+    .navItems {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search {
+        width: 80%;
+    }
+
+    .list select {
+        width: 80%;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .navItems {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .list {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .search {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+
+    .list select {
+        width: 90%;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+}
